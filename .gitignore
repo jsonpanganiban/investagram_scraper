@@ -1,3 +1,10 @@
 .gitignore
 *.pyc
 __pycache__
+build/
+dbs/
+eggs/
+project.egg-info/
+.scrapy/
+setup.py
+logs/

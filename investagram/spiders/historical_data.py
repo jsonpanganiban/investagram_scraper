@@ -8,7 +8,7 @@ from shutil import which
 
 
 class CoinSpider(scrapy.Spider):
-    name = 'investagram'
+    name = 'historical_data'
     allowed_domains = ['https://www.investagrams.com/']
     start_urls = [
         'https://www.investagrams.com/'
@@ -18,8 +18,9 @@ class CoinSpider(scrapy.Spider):
         chrome_options = Options()
         chrome_options.add_argument('--headless')
 
-        chrome_path = which("chromedriver")
-        driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
+        # chrome_path = which("chromedriver")
+        # driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
+        driver = webdriver.Chrome(options=chrome_options)
 
         driver.implicitly_wait(60)
         driver.set_window_size(1920, 1080)
